@@ -36,6 +36,7 @@ class ApiController implements SubscriberInterface
     {
         return [
             'Enlight_Controller_Dispatcher_ControllerPath_Api_Metrics' => 'onGetMetricsApiController',
+            'Enlight_Controller_Dispatcher_ControllerPath_Frontend_Supplier' => 'onGetFrontendMetricsController',
         ];
     }
 
@@ -47,5 +48,10 @@ class ApiController implements SubscriberInterface
     public function onGetMetricsApiController(\Enlight_Event_EventArgs $args)
     {
         return $this->pluginPath . '/Controllers/Api/Metrics.php';
+    }
+
+    public function onGetFrontendMetricsController(\Enlight_Event_EventArgs $args)
+    {
+        return $this->pluginPath . '/Controllers/Frontend/Metrics.php';
     }
 }
