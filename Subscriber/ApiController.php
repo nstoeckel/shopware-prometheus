@@ -36,7 +36,7 @@ class ApiController implements SubscriberInterface
     {
         return [
             'Enlight_Controller_Dispatcher_ControllerPath_Api_Metrics' => 'onGetMetricsApiController',
-            'Enlight_Controller_Dispatcher_ControllerPath_Frontend_Supplier' => 'onGetFrontendMetricsController',
+            'Enlight_Controller_Dispatcher_ControllerPath_Frontend_Metrics' => 'onGetFrontendMetricsController',
         ];
     }
 
